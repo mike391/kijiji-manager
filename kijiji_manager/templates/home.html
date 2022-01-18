@@ -4,10 +4,11 @@
 
 {% block content %}
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
 <table id="header"><tr><td><h2>Listings</h2></td><td valign="bottom" align="right"><h2></h2></td></tr></table>
 <div>
-    <p>Welcome back, {{ name }}!<span class="button" style="float:right;"><a href="{{ url_for('ad.repost_all') }}">Repost all ads <i class="fas fa-reply"></i></a></span></p>
+    <p>Welcome back, {{ name }}!<span class="button" style="float:right;"><a href="{{ url_for('ad.repost_all') }}">Repost all ads <i class="fa fa-reply"></i></a></span></p>
     <table id="adlist">
         <thead>
         <tr>
@@ -56,8 +57,8 @@
             <td align="center">{{ ad['ad:rank']|adpage }}</td>
             <td align="center">{{ ad['ad:start-date-time']|datetime }}</td>
             <td align="center">{{ ad['ad:end-date-time']|datetime }}</td>
-            <td align="center"><a href="{{ url_for('ad.repost', ad_id=ad['@id']) }}"><i class="fas fa-reply"></i></a></td>
-            <td align="center"><a href="{{ url_for('ad.delete', ad_id=ad['@id']) }}"><i class="fas fa-trash"></i></a></td>
+            <td align="center"><a href="{{ url_for('ad.repost', ad_id=ad['@id']) }}"><i class="fa fa-reply"></i></a></td>
+            <td align="center"><a href="{{ url_for('ad.delete', ad_id=ad['@id']) }}"><i class="fa  fa-times"></i></a></td>
         </tr>
         {% endfor %}
         {% endif %}

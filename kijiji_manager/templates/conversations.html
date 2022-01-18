@@ -11,7 +11,7 @@
         {% if page > 0 %}
         <td align="left"><h2><a href="{{ url_for('user.conversations', page=page - 1) }}"><i class="fas fa-chevron-left"></i> Previous</a></h2></td>
         {% endif %}
-        <td align="right"><h2><a href="{{ url_for('user.conversations', page=page + 1) }}">Next <i class="fas fa-chevron-right"></i></a></h2></td>
+        <td align="right"><h2><a href="{{ url_for('user.conversations', page=page + 1) }}">Next <i class="fa fa-chevron-right"></i></a></h2></td>
     </tr>
 </table>
 <div>
@@ -47,15 +47,15 @@
             <td align="center">
                 {% if 'user:user-message' in item %}
                 {% if item['user:user-message']['user:read'] == 'true' %}
-                <i class="fas fa-check" title="Read"></i>
+                <i class="fa fa-check" title="Read"></i>
                 {% elif item['user:user-message']['user:read'] == 'false' %}
-                <i class="fas fa-envelope" title="Unread"></i>
+                <i class="fa fa-envelope" title="Unread"></i>
                 {% endif %}
                 {% endif %}
             </td>
             <td align="center">
                 {% if item['user:flagged-seller'] == 'true' or item['user:flagged-buyer'] == 'true' %}
-                <i class="fas fa-flag"></i>
+                <i class="fa fa-flag"></i>
                 {% endif %}
             </td>
             <td align="center">

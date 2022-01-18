@@ -8,19 +8,19 @@
     {% else %}
     <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}">
     {% endif %}
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body class="loggedin">
     <nav class="navtop">
         <div>
             <h1>Kijiji Manager</h1>
-            <a href="{{ url_for('main.home') }}"><i class="fas fa-home"></i>Home</a>
-            <a href="{{ url_for('ad.post') }}"><i class="fas fa-pencil-alt"></i>Post</a>
-            <a href="{{ url_for('ad.post_manual') }}"><i class="fas fa-pencil-alt"></i>Post Manual</a>
-            <a href="{{ url_for('user.conversations', page=0) }}"><i class="fas fa-comment"></i>Conversations</a>
-            <a href="{{ url_for('user.profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
-            <a href="{{ url_for('user.logout') }}"><i class="fas fa-sign-out-alt"></i>Logout</a>
+            <a href="{{ url_for('main.home') }}"><i class="fa fa-home"></i>Home</a>
+            <a href="{{ url_for('ad.post') }}"><i class="fa fa-pencil"></i>Post</a>
+            <a href="{{ url_for('ad.post_manual') }}"><i class="fa fa-pencil"></i>Post Manual</a>
+            <a href="{{ url_for('user.conversations', page=0) }}"><i class="fa fa-comment"></i>Conversations</a>
+            <a href="{{ url_for('user.profile') }}"><i class="fa fa-user-circle"></i>Profile</a>
+            <a href="{{ url_for('user.logout') }}"><i class="fa fa-sign-out"></i>Logout</a>
         </div>
     </nav>
     {% with messages = get_flashed_messages() %}
